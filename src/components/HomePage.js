@@ -11,6 +11,10 @@ const HomePage = ({ navigation }) => {
     const goToMeMo = () => {
         navigation.navigate('Dictionary');
     };
+    const goToAbout = () => {
+        navigation.navigate('AboutPage');
+    }
+
 
     const [isFontsLoaded, setIsFontsLoaded] = useState(false);
 
@@ -37,6 +41,9 @@ const HomePage = ({ navigation }) => {
             <TouchableOpacity style={styles.button} onPress={goToMeMo}>
                 <Text style={styles.buttonText}>Memories</Text>
             </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={goToAbout}>
+                <Text style={styles.buttonText}>About Page</Text>
+            </TouchableOpacity>
         </View>
     );
 };
@@ -49,14 +56,16 @@ const styles = StyleSheet.create({
         backgroundColor: '#46579b',
     },
     title: {
-        fontSize: 24,
+        fontSize: 34,
         fontWeight: 'bold',
-        marginBottom: 20,
+        marginBottom: 300,
     },
     button: {
         backgroundColor: '#f1f1f1',
-        padding: 10,
+        padding: 18,
         borderRadius: 5,
+
+        marginBottom: 70,
     },
     buttonText: {
         fontSize: 18,
